@@ -21,3 +21,10 @@ $ rails db:migrate
 $ rails server
 $ open http://localhost:3000/banks
 ```
+
+## Database Seed
+
+```
+$ rails db:seed
+Bank: 1345, Branch: 31169
+```
