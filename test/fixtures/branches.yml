@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  name: MyString
+  name_kana: MyString
+  name_hira: MyString
+  name_en: MyString
+  bank: one
+
+two:
+  code: MyString
+  name: MyString
+  name_kana: MyString
+  name_hira: MyString
+  name_en: MyString
+  bank: two
