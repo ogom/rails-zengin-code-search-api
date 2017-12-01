@@ -28,3 +28,13 @@ $ open http://localhost:3000/banks
 $ rails db:seed
 Bank: 1345, Branch: 31169
 ```
+
+## Overriding Named Route Parameters
+
+```
+$ open http://localhost:3000/banks/0001
+$ open http://localhost:3000/banks/0001/branches/001
+```
+
+* http://guides.rubyonrails.org/routing.html#overriding-named-route-parameters
+

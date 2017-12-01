@@ -8,7 +8,7 @@ class BanksController < ApplicationController
     render json: @banks
   end
 
-  # GET /banks/1
+  # GET /banks/:code
   def show
     render json: @bank
   end
@@ -24,7 +24,7 @@ class BanksController < ApplicationController
     end
   end
 
-  # PATCH/PUT /banks/1
+  # PATCH/PUT /banks/:code
   def update
     if @bank.update(bank_params)
       render json: @bank
@@ -33,7 +33,7 @@ class BanksController < ApplicationController
     end
   end
 
-  # DELETE /banks/1
+  # DELETE /banks/:code
   def destroy
     @bank.destroy
   end
@@ -41,7 +41,7 @@ class BanksController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_bank
-      @bank = Bank.find(params[:id])
+      @bank = Bank.find_by(code: params[:code])
     end
 
     # Only allow a trusted parameter "white list" through.

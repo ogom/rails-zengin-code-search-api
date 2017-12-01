@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :branches
-  resources :banks
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :banks, param: :code do
+    resources :branches, param: :code
+  end
 end
