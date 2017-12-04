@@ -45,3 +45,6 @@ gem 'zengin_code', require: false
 
 # https://github.com/mrkamel/search_cop
 gem 'search_cop'
+
+# https://github.com/rails-api/active_model_serializers
+gem 'active_model_serializers'

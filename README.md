@@ -44,3 +44,10 @@ $ open http://localhost:3000/banks/0001/branches/001
 $ rails generate controller search/banks index
 $ rails generate controller search/branches index
 ```
+
+## Model Serializer
+
+```
+$ rails generate serializer bank
+$ rails generate serializer branch
+```
