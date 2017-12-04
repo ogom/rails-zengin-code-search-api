@@ -42,3 +42,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # https://github.com/zengin-code/zengin-rb
 gem 'zengin_code', require: false
+
+# https://github.com/mrkamel/search_cop
+gem 'search_cop'

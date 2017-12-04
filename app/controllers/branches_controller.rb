@@ -1,5 +1,5 @@
 class BranchesController < ApplicationController
-  before_action :set_bank, only: [:index, :show, :create, :update, :destroy]
+  before_action :set_bank
   before_action :set_branch, only: [:show, :update, :destroy]
 
   # GET /banks/:bank_code/branches
