@@ -1,5 +1,5 @@
 class Search::BranchesController < ApplicationController
-before_action :set_bank
+  before_action :set_bank
 
   # GET /search/banks/:bank_code/branches
   def index

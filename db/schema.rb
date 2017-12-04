@@ -13,24 +13,26 @@
 ActiveRecord::Schema.define(version: 20171201132039) do
 
   create_table "banks", force: :cascade do |t|
-    t.string "code"
-    t.string "name"
-    t.string "name_kana"
-    t.string "name_hira"
-    t.string "name_en"
+    t.string "code", default: "", null: false
+    t.string "name", default: "", null: false
+    t.string "name_kana", default: "", null: false
+    t.string "name_hira", default: "", null: false
+    t.string "name_en", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_banks_on_code", unique: true
   end
 
   create_table "branches", force: :cascade do |t|
-    t.string "code"
-    t.string "name"
-    t.string "name_kana"
-    t.string "name_hira"
-    t.string "name_en"
+    t.string "code", default: "", null: false
+    t.string "name", default: "", null: false
+    t.string "name_kana", default: "", null: false
+    t.string "name_hira", default: "", null: false
+    t.string "name_en", default: "", null: false
     t.integer "bank_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["bank_id", "code"], name: "index_branches_on_bank_id_and_code", unique: true
     t.index ["bank_id"], name: "index_branches_on_bank_id"
   end
 

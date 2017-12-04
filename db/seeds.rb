@@ -1,6 +1,7 @@
 require 'zengin_code'
 
 ZenginCode::Bank.all.each do |original_code, original_bank|
+  puts "== #{original_code}:#{original_bank.name}"
   bank = Bank.find_or_initialize_by(code: original_code)
   bank.name = original_bank.name
   bank.name_kana = original_bank.kana
@@ -10,6 +11,7 @@ ZenginCode::Bank.all.each do |original_code, original_bank|
   bank.save!
 
   original_bank.branches.each do |original_code, original_branch|
+    puts "-- #{bank.code}:#{bank.name} #{original_code}:#{original_branch.name}"
     branch = bank.branches.find_or_initialize_by(code: original_code)
     branch.name = original_branch.name
     branch.name_kana = original_branch.kana
